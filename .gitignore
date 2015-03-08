@@ -1,0 +1,5 @@
+node_modules
+bower_components
+lib
+static/js/vendor
+static/css/vendor
