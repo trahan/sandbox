@@ -31,7 +31,8 @@ module.exports = (grunt) ->
       vendor:
         files:
           'static/css/vendor/vendor.min.css': [
-            'bower_components/open-sans-fontface/open-sans.css'
+            'bower_components/bootstrap/dist/css/bootstrap.css'
+            'bower_components/open-sans-fontface/open-sans.css',
           ]
 
   grunt.loadNpmTasks 'grunt-contrib-coffee'
