@@ -1,11 +1,19 @@
 express = require 'express'
+swig = require 'swig'
 
 config = require './config'
 
 app = express()
 
+app.engine 'html', swig.renderFile
+
 app.set 'views', './views'
-app.set 'view engine', 'jade'
+app.set 'view engine', 'html'
+
+app.set 'view cache', false
+swig.setDefaults
+  cache: false
+
 app.use '/static', express.static 'static'
 
 app.get '/', (req, res) ->
